@@ -1,0 +1,83 @@
+{
+    "Header": {
+    "Products": "Mahsulotlar",
+    "About us": "Biz haqimizda",
+    "Cart_btn": "Savat",
+    "Account": "Akkaunt",
+      "Product_Categories": {
+        "DairyProducts": "Sut Mahsulotlari",
+        "Vegetables": "Sabzavotlar",
+        "Bakery": "Qandolat"
+      }
+    },
+    "BottomNavigation": {
+    "Home_nav": "Asosiy",
+    "About_nav": "Malu'mot",
+    "Cart_nav": "Savat",
+    "Category_nav": "Katalog",
+    "Account_nav": "Akkaunt"
+    },
+    "Home": {
+    "title_1": "Aqlli xarid & Sog'lom hayot",
+    "title_2": "Yangi oziq-ovqat va sabzavotlar har kuni, Hattoki yo'lda ham",
+    "title_3": "Kategoriyalarimizni o'rganing",
+    "title_4": "Biz Nima Taklif Qilamiz?",
+    "title_5": "Tez yetkazib berish",
+    "title_6": "Yuqori-sifatli mahsulotlar",
+    "title_7": "Xavfsiz to'lov",
+    "cardtitle_1": "Sut Mahsulotlari",
+    "cardtitle_2": "Sabzavotlar",
+    "cardtitle_3": "Mevalar",
+    "cardtitle_4": "Qandolat",
+    "cardtitle_5": "Soatlar ichida oziq-ovqat yetkazib berish xizmatiga ega bo'ling",
+    "cardtitle_6": "Biz faqat saralangan yuqori sifatli mahsulotlarni ulashamiz",
+    "cardtitle_7": "Hamma to'lovlar himoyalangan va xavfsiz"
+    },
+    "About": {
+      "HeroSection": {
+        "title_1": "Sevimli Mahsulotlaringiz",
+        "title_2": "Istalgan Joyda Yetkaziladi,",
+        "title_3":  "Istalgan Vaqtda",
+        "title_4": "Tez, Yangi va Ishonchli mahsulotlar",
+        "title_5": "endi xonadoningiz ostonasida",
+        "cardtitle_1": "Tezkor Yetkazish",
+        "cardtitle_2": "Biz Mahsulotlarni Tez",
+        "cardtitle_3": "Yetkazib Beramiz",
+        "cardtitle_4": "Halol va Yaxshiroq Sifat",
+        "cardtitle_5": "Biz Faqat Sizga",
+        "cardtitle_6": "Halol Va Yangi Mahsulot Ulashamiz"
+      },
+      "FeaturesSection": {
+        "title_1": "Nega Xaridorlar Aynan Bizni Tanlaydi?",
+        "title_2": "Eng tez yetkazib berishdan tortib sifatli mahsulotgacha, Biz har bir buyurtma xaridorlarimizga tabassum olib kelishiga ishonch hosil qilamiz"
+      }
+    },
+    "button_1": "Buyurtma ber",
+    "button_2": "Ko'proq",
+    "Cart": {
+     "Header": {
+     "Products": "Mahsulotlar",
+     "Price": "Narx",
+     "Quantity": "Miqdor",
+     "Total": "Jami",
+     "Products_list": "Mahsulotlar Ro'yxati"
+    },
+     "Buttons": {
+     "Remove": "O'chirish"
+     }
+    },
+    "Footer": {
+      "title_1": "Aqlli xarid & Sog'lom hayot",
+      "ul_title_1": "Mahsulotlar",
+      "li_title_1": "Sut Mahsulotlari",
+      "li_title_2": "Sabzavotlar",
+      "li_title_3": "Qandolat",
+      "ul_title_2": "Yordam kerakmi?",
+      "li_title_4": "Ko'proq o'rganish",
+      "li_title_5": "Buyurtmalaringiz",
+      "li_title_6": "Akkountlar",
+      "title_2": "Maxfiylik siyosati",
+      "title_3": "Foydalanish shartlari",
+      "title_4": "Huquqlar himoyalangan"
+    }
+}

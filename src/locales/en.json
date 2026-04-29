@@ -1,0 +1,83 @@
+{
+    "Header": {
+    "Products": "Products",
+    "About us": "About us",
+    "Cart_btn": "Cart",
+    "Account": "Account",
+     "Product_Categories": {
+        "DairyProducts": "Dairy Products",
+        "Vegetables": "Vegetables",
+        "Bakery": "Qandolat"
+     }
+    },
+    "BottomNavigation": {
+    "Home_nav": "Home",
+    "About_nav": "About",
+    "Cart_nav": "Cart",
+    "Category_nav": "Category",
+    "Account_nav": "Account"
+    },
+    "Home": {
+    "title_1": "Shop smarter & Feel healthy",
+    "title_2": "Fresh Groceries & Vegetables Every day, Even On The Road",
+    "title_3": "Explore Our Categories",
+    "title_4": "What We Offer?",
+    "title_5": "Fast Delivery",
+    "title_6": "High-quality fresh items",
+    "title_7": "Secure Payment",
+    "cardtitle_1": "Dairy Products",
+    "cardtitle_2": "Vegetables",
+    "cardtitle_3": "Fruits",
+    "cardtitle_4": "Bakery",
+    "cardtitle_5": "Get your groceries delivered to your doorstep within hours",
+    "cardtitle_6": "We only provide hand-picked high-quality fresh items",
+    "cardtitle_7": "All transcations are encrypted"
+    },
+    "About": {
+     "HeroSection": {
+        "title_1": "Get Your Favorite Groceries",
+        "title_2": "Delivered Anywhere,",
+        "title_3": "Anytime Today",
+        "title_4": "Fast, Fresh and Reliable",
+        "title_5": "Products at your doorstep",
+        "cardtitle_1": "Fastest Delivery",
+        "cardtitle_2": "We Deliver Products",
+        "cardtitle_3": "Really Quickly",
+        "cardtitle_4": "Halal and Better Quality",
+        "cardtitle_5": "We Only Provide",
+        "cardtitle_6": "Fresh And Halal Products"
+     },
+     "FeaturesSection": {
+        "title_1": "Why Customers Only Choose Us?",
+        "title_2": "From Lightning-fast deliveries to the freshest groceries, We make sure every order leaves you smiling."
+     }
+    },
+    "button_1": "Order now",
+    "button_2": "Learn more",
+    "Cart": {
+    "Header": {
+        "Products": "Products",
+        "Price": "Price",
+        "Quantity": "Quantity",
+        "Total": "Total",
+        "Products_list": "Products List"
+    },
+    "Buttons": {
+        "Remove": "Remove"
+    }
+    },
+    "Footer": {
+      "title_1": "Shop smarter & Feel healthy",
+      "ul_title_1": "Order products",
+      "li_title_1": "Dairy Products",
+      "li_title_2": "Vegetables",
+      "li_title_3": "Bakery",
+      "ul_title_2": "Let us help you?",
+      "li_title_4": "Learn more",
+      "li_title_5": "Your orders",
+      "li_title_6": "Accounts",
+      "title_2": "Privacy Policy",
+      "title_3": "Terms & Conditions",
+      "title_4": "All rights reserved"
+    }
+}
