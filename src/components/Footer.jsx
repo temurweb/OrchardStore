@@ -18,7 +18,7 @@ export default function Footer() {
 
 
   return (
-   <footer className={`bg-gray-700 px-5 md:px-10 lg:px-30 py-8 ${isLogin || isRegister ? "hidden" : ""}`}>
+   <footer className={`bg-gray-700 px-5 md:px-10 lg:px-20 py-8 ${isLogin || isRegister ? "hidden" : ""}`}>
     <div className='flex flex-col items-center  md:flex-row md:justify-between  py-10'>
     <h1 className=' text-white text-4xl font-bold'>Orchard<span className='text-yellow-400'>Store</span></h1>
     <h2 className='text-white text-2xl font-bold'>{t("Footer.title_1")}</h2>

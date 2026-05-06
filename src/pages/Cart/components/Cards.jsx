@@ -1,108 +1,66 @@
 import React from 'react'
+// cart
 import { useCartStore } from '../../../store/useCartStore'
-import { Link } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
-// image
-import search from '../../../images/search.png'
+// hooks
+import { useTranslation } from 'react-i18next'
 // react-icons
-import { MdDelete } from "react-icons/md";
-import { FiPlus } from "react-icons/fi";
-import { FiMinus } from "react-icons/fi";
+import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai"
 
 export default function Cards() {
-   const { t } = useTranslation()
+  const { cart, addToCart, decreaseQuantity, removeFromCart } = useCartStore()
 
-    const {cart, addToCart, removeFromCart, decreaseQuantity } = useCartStore()
-    console.log(cart.length, cart)
+  // translation
+  const { t } = useTranslation()
 
 
-
-   if (cart.length === 0) {
-    return (
-        <div className='flex flex-col items-center py-20 h-screen text-green-600 text-2xl lg:text-3xl font-bold'>
-            <h2>Unfortunately, Cart is Empty</h2>
-            <p>Begin searching for products </p>
-            <button className='bg-green-600 text-white px-4 py-3 rounded-3xl mt-2 shadow-md shadow-green-600'><Link to='/'>Continue shopping</Link></button>
-            <img className='h-96 mt-6' src={search} alt="searcherman" />
-        </div>
-    )
-   }
-
-  const totalCart = cart.length
-
-  //  Total price
-  const total = cart.reduce((sum, item) => {
-   return sum + item.price * item.quantity
+  // cart
+  const totalPrice = cart.reduce((sum, item) => {
+    return sum + item.price * item.quantity
   }, 0)
 
   return (
-    <div className='pt-10 px-5 lg:px-20 bg-gray-200 '>
-      <h2 className='lg:hidden mb-4 text-green-600 text-[24px] font-bold'>Your Cart</h2>
-      {/* Header */}
-      <div className='hidden lg:grid lg:grid-cols-4 text-green-600 text-[32px] font-bold '>
-        <h2>{t("Cart.Header.Products")}</h2>
-        <h2>{t("Cart.Header.Price")}</h2>
-        <h2>{t("Cart.Header.Quantity")}</h2>
-        <h2>Total</h2>
-      </div>
-
-      {/* Products */}
-      <div className='bg-white lg:max-w-7xl shadow-xl p-2 rounded-2xl'>
-        <h2 className='text-center text-green-600 text-[20px] font-bold lg:hidden'>{t("Cart.Header.Products_list")}</h2>
-        {cart.map(item => 
-        <div className='grid grid-cols-1 lg:grid-cols-4  relative' key={item.id}>
-          <hr className='my-2 text-gray-200 lg:hidden' />
-          {/* Product info */}
-           <div className='flex gap-3 lg:flex-col '>
-             <div className='bg-green-400 w-44 rounded-3xl mb-2'>
-              <img className={item.class} src={item.image} alt="product_image" />
-             </div>
-             <div>
-              <div className='flex flex-col  gap-2 mb-2'>
-                <h2>{item.name}</h2>
-                <p className='lg:hidden'>{item.price} sum</p>
-                <div className='flex gap-x-2'>
-                  <h2>{item.size} </h2>
-                {item.pricePerG && <p>{item.pricePerG}</p>}
-                </div>
-                {/* Quantity for mobile */}
-                <div className='lg:hidden flex justify-center items-center gap-2 bg-gray-200 px-2 py-1 rounded-full w-24'>
-                  <button className='flex items-center justify-center bg-white p-1 rounded-full w-6 h-6' disabled={item.quantity === 1} onClick={() => decreaseQuantity(item)}><FiMinus/></button>
-                  <p>{item.quantity}</p>
-                  <button className='flex items-center justify-center bg-black text-white font-bold p-1 rounded-full w-6 h-6' disabled={item.quantity === 10} onClick={() => addToCart(item)}><FiPlus/></button>
-                </div>
+    <div className='bg-gray-200 py-10 px-5 lg:px-10 flex flex-col items-center gap-6 lg:flex-row lg:items-start lg:justify-center lg:gap-8'>
+      <div className='bg-white rounded-3xl w-[400px] lg:w-[800px]'>
+        {cart.map((item) => {
+        return (
+          <div className=' flex flex-col gap-4 px-2 py-5 text-[16px] lg:text-[20px] border-2 border-gray-200' key={item.id}>
+            <div className='flex gap-3'>
+             <img src={item.image} className={item.class} alt="item.image" />
+              <div>
+              <h2>{item.name}</h2>
+              <div className='flex gap-2'>
+               <p>{item.size}</p> 
+                {item.pricePerG && <p>{item.pricePerG} {t("Cart.Currency")}</p>} 
+              </div>  
+              <h2 className=''>{item.price} {t("Cart.Currency")}</h2>
+              <div className='flex justify-center w-24 lg:w-32 rounded-2xl items-center gap-4 bg-gray-200 mt-4 border border-gray-800/70'>
+                <button disabled={item.quantity === 10} onClick={() => addToCart(item)}>
+                  <AiOutlinePlus className='w-5 h-5 cursor-pointer'/>
+                </button>
+                <p>{item.quantity}</p>
+                <button disabled={item.quantity === 1} onClick={() => decreaseQuantity(item)}>
+                  <AiOutlineMinus className='w-5 h-5 cursor-pointer'/>
+                </button>
               </div>
-             </div>
+              </div> 
+            </div> 
+               
+          </div>
+        )
+      })}
+      </div>
+      
+      {/* subtotal */}
+      <div className='bg-white flex flex-col  rounded-2xl w-[300px] lg:w-[400px] py-4'>
+        <h2 className='text-[24px] text-green-600 font-bold text-center'>SubTotal:</h2>
+         <div className='flex flex-col mt-4 gap-4'>
+           <hr className='text-gray-200 w-full' />
+           <div className='flex justify-between px-2'>
+            <h2 className='text-[16px] lg:text-[20px] font-bold'>Total Price:</h2>
+            <h2 className='text-[16px] lg:text-[20px] font-extrabold underline'>{totalPrice} {t("Cart.Currency")}</h2>
            </div>
-           {/* Product-price */}
-            <h2 className='my-8 hidden lg:block'>{item.price} UZS</h2>
-            {/* Quantity for desktop */}
-            <div className='hidden lg:flex lg:justify-center lg:items-center gap-x-6 my-8 bg-gray-200 h-8 w-32 px-2 rounded-2xl font-bold'>
-             <button disabled={item.quantity === 1} onClick={() => decreaseQuantity(item)} className='w-6 h-6 cursor-pointer'><FiMinus className=''/></button>
-             <p>{item.quantity}</p>
-             <button disabled={item.quantity === 10} onClick={() => addToCart(item)} className='w-6 h-6 cursor-pointer'><FiPlus/></button>
-            </div>
-            {/* total price */}
-            <p className='py-8 hidden lg:block'>{total} SUM</p>
-            <button onClick={() => removeFromCart(item)} className='absolute top-5 right-2 text-white bg-gray-400 rounded-full p-2 ml-2 lg:hidden'>
-              <MdDelete className='w-4 h-4'/>
-            </button>
-            {/* remove button for desktop */}
-            <button onClick={() => removeFromCart(item)} className='hidden lg:flex lg:items-center lg:absolute lg:right-8 lg:top-8 lg:gap-1 lg:cursor-pointer bg-red-500 px-3 py-2 rounded-full text-white'>
-              <MdDelete/>
-              <h2>{t("Cart.Buttons.Remove")}</h2>
-            </button>
-        </div>
-      )}
+         </div>
       </div>
-      {/* Checkout and total for mobile */}
-      <div className=' mt-8 bg-white px-5 py-10 rounded-t-4xl shadow-xl flex flex-col'>
-        <h2 className='flex justify-between text-[20px] font-bold text-gray-700'>Subtotal: <span className='text-black'>{total} UZS</span></h2>
-        <hr className='text-gray-200 my-2' />
-        <h2 className='flex justify-between text-[20px] font-bold text-gray-700'>Delivery: <span className='text-black'>Free</span></h2>
-        <button className=' mt-4 bg-green-500 w-52 mx-auto px-6 py-3 text-white text-[20px] font-bold rounded-full shadow-lg shadow-green-500'>Checkout now</button>
-      </div>
-
     </div>
   )
 }

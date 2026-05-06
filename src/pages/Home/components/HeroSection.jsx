@@ -1,23 +1,25 @@
 import React from 'react'
-import shopping_man_and_woman from '../../../images/shopping_man_and_woman.png'
+import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next'
-import { Link } from 'react-router-dom'
+// images
+import man_withproducts from '../../../images/man_withproducts.png'
+// react-icons
+import { FaChevronRight } from "react-icons/fa";
 
 export default function HeroSection() {
-  const { t } = useTranslation()
+ const { t } = useTranslation()
+
   return (
-    <div>
-      <div className='pt-20 bg-linear-to-r from-green-600 to-green-800 px-5 md:px-20 flex flex-col lg:flex-row'>
-        <div className='flex flex-col items-center'>
-          <h1 className='text-yellow-500 text-2xl md:text-5xl font-bold'>{t("Home.title_1")}</h1>
-        <p className='text-[16px] md:text-[24px] text-white font-semibold'>{t("Home.title_2")}</p>
-        <div className='flex gap-2 md:gap-4 mt-4 md:mt-3'>
-        <button className='w-44 lg:w-52 px-3 py-2 bg-yellow-500 mt-2 rounded-full text-[20px] lg:text-[24px] text-white font-semibold shadow-md shadow-yellow-500'>{t("button_1")}</button>
-        <button className='w-44 lg:w-52 px-3 py-2 border-2 border-yellow-500 mt-2 rounded-full text-yellow-500 text-[20px] lg:text-[24px] font-semibold hover:bg-yellow-500 hover:text-white hover:shadow-md hover:shadow-yellow-500'><Link to='/aboutus'>{t("button_2")}</Link></button>
+    <div className='px-5 lg:px-10 py-10 bg-gray-200'>
+      <div className='bg-green-600 rounded-3xl flex flex-col items-center lg:flex-row  lg:justify-between pt-10 px-5 md:px-20 h-[512px] overflow-hidden'>
+        <div className=''>
+          <h2 className='text-[24px] md:text-[32px] lg:text-[40px] text-yellow-500 font-bold'>{t("Home.title_1")}</h2>
+          <p className='text-[20px] md:text-[24px] lg:text-[32px] text-white font-bold'>{t("Home.title_2")} <br className='hidden lg:block'/> {t("Home.title_2.5")}</p>
+          <Link className='mt-4 ' to='/category'><button className=' w-52 lg:w-64 text-[24px] p-1 bg-yellow-500 text-white font-bold mt-4 rounded-full shadow-md shadow-yellow-500 cursor-pointer'>{t("button_1")}</button></Link>
         </div>
-        </div>
-        <img className='w-3xl mt-5 lg:mt-0' src={shopping_man_and_woman} alt="shoppingmanandwoman" />
+        <img className='w-[250px] lg:w-[410px]' src={man_withproducts} alt="man" />
       </div>
     </div>
   )
 }
+

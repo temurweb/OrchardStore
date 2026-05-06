@@ -3,7 +3,9 @@
     "Products": "Mahsulotlar",
     "About us": "Biz haqimizda",
     "Cart_btn": "Savat",
-    "Account": "Akkaunt",
+    "Login": "Kirish",
+    "Register": "Ro'yxatdan o'tish",
+    "hi": "Salom",
       "Product_Categories": {
         "DairyProducts": "Sut Mahsulotlari",
         "Vegetables": "Sabzavotlar",
@@ -19,7 +21,8 @@
     },
     "Home": {
     "title_1": "Aqlli xarid & Sog'lom hayot",
-    "title_2": "Yangi oziq-ovqat va sabzavotlar har kuni, Hattoki yo'lda ham",
+    "title_2": "Yangi oziq-ovqat va sabzavotlar har kuni,",
+    "title_2.5": "Hattoki yo'lda ham",
     "title_3": "Kategoriyalarimizni o'rganing",
     "title_4": "Biz Nima Taklif Qilamiz?",
     "title_5": "Tez yetkazib berish",
@@ -54,17 +57,20 @@
     },
     "button_1": "Buyurtma ber",
     "button_2": "Ko'proq",
+    "button_3": "Hammasini Ko'rish",
     "Cart": {
-     "Header": {
-     "Products": "Mahsulotlar",
-     "Price": "Narx",
-     "Quantity": "Miqdor",
-     "Total": "Jami",
-     "Products_list": "Mahsulotlar Ro'yxati"
-    },
+     "ProductsList": "Mahsulotlar ro'yxati",
+     "Currency": "So'm",
      "Buttons": {
      "Remove": "O'chirish"
      }
+    },
+    "Products": {
+    "DairyProducts": {
+      "Milk": "Sut",
+      "SourCream": "Qaymoq",
+      "OrchardYog": "Orchard Yog"
+    } 
     },
     "Footer": {
       "title_1": "Aqlli xarid & Sog'lom hayot",

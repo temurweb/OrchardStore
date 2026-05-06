@@ -48,7 +48,10 @@ export const useCartStore = create(
               set({
                 cart: get().cart.filter(p => p.id !== product.id)
               })
-            }
+            },
+
+
+            
         }),
         {
             name: "cart-storage"

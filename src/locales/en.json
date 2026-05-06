@@ -1,9 +1,11 @@
 {
     "Header": {
     "Products": "Products",
-    "About us": "About us",
+    "About us": "About Us",
     "Cart_btn": "Cart",
-    "Account": "Account",
+    "Login": "Login",
+    "Register": "Register",
+    "hi": "Hi",
      "Product_Categories": {
         "DairyProducts": "Dairy Products",
         "Vegetables": "Vegetables",
@@ -19,7 +21,8 @@
     },
     "Home": {
     "title_1": "Shop smarter & Feel healthy",
-    "title_2": "Fresh Groceries & Vegetables Every day, Even On The Road",
+    "title_2": "Fresh Groceries & Vegetables Every day,",
+    "title_2.5": "Even On The Road",
     "title_3": "Explore Our Categories",
     "title_4": "What We Offer?",
     "title_5": "Fast Delivery",
@@ -54,17 +57,20 @@
     },
     "button_1": "Order now",
     "button_2": "Learn more",
+    "button_3": "View All",
     "Cart": {
-    "Header": {
-        "Products": "Products",
-        "Price": "Price",
-        "Quantity": "Quantity",
-        "Total": "Total",
-        "Products_list": "Products List"
-    },
+    "ProductsList": "Products List",
+    "Currency": "sum",
     "Buttons": {
         "Remove": "Remove"
     }
+    },
+    "Products": {
+    "DairyProducts": {
+        "Milk": "Milk",
+        "SourCream": "Sour Cream",
+        "OrchardYog": "Orchard Yog"
+    } 
     },
     "Footer": {
       "title_1": "Shop smarter & Feel healthy",

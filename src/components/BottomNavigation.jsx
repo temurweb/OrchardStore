@@ -39,13 +39,13 @@ const navigate = useNavigate()
         </NavLink>
         </li>
         <li>
-        <NavLink className={({isActive}) => `flex flex-col items-center py-2 px-4 rounded-full  ${isActive ? "bg-yellow-500 text-white transition-all duration-300 ease-in-out" : "text-black"}` } to='/aboutus'>
+        <NavLink className={({isActive}) => `flex flex-col items-center py-2 px-4 rounded-full  ${isActive ? "bg-yellow-500 shadow-md shadow-yellow-500 text-white transition-all duration-300 ease-in-out" : "text-black"}` } to='/aboutus'>
         <IoInformationCircleOutline className='w-6 h-6 md:w-10 md:h-10'/>
         <h2 className='text-[12px] md:text-[20px] font-bold'>{t("BottomNavigation.About_nav")}</h2>
         </NavLink>
         </li>
         <li>
-        <NavLink className={({isActive}) => `flex flex-col items-center py-2 px-4 rounded-full  ${isActive ? "bg-yellow-500 text-white transition-all duration-300 ease-in-out" : "text-black"}`} to='/cart'>
+        <NavLink className={({isActive}) => `flex flex-col items-center py-2 px-4 rounded-full  ${isActive ? "bg-yellow-500 shadow-md shadow-yellow-500 text-white transition-all duration-300 ease-in-out" : "text-black"}`} to='/cart'>
         <div className='relative'>
         <div className='absolute -top-1.5 -right-1 flex items-center justify-center bg-green-500 px-1  rounded-full'>
           <p className='text-white text-[8px]'>{total}</p>
