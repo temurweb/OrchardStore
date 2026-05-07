@@ -60,16 +60,18 @@
     "button_3": "Hammasini Ko'rish",
     "Cart": {
      "ProductsList": "Mahsulotlar ro'yxati",
-     "Currency": "So'm",
+     "Currency": "so'm",
+     "Size": "O'lcham",
      "Buttons": {
-     "Remove": "O'chirish"
+     "Remove": "O'chirish",
+     "AddToCart": "Savatga qo'shish"
      }
     },
     "Products": {
     "DairyProducts": {
-      "Milk": "Sut",
+      "Milk": "Sut 2%",
       "SourCream": "Qaymoq",
-      "OrchardYog": "Orchard Yog"
+      "OrchardYog": "Orchard Yogurt"
     } 
     },
     "Footer": {

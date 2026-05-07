@@ -9,7 +9,7 @@
      "Product_Categories": {
         "DairyProducts": "Dairy Products",
         "Vegetables": "Vegetables",
-        "Bakery": "Qandolat"
+        "Bakery": "Bakery"
      }
     },
     "BottomNavigation": {
@@ -61,15 +61,17 @@
     "Cart": {
     "ProductsList": "Products List",
     "Currency": "sum",
+    "Size": "Size",
     "Buttons": {
-        "Remove": "Remove"
+        "Remove": "Remove",
+        "AddToCart": "Add To Cart"
     }
     },
     "Products": {
     "DairyProducts": {
-        "Milk": "Milk",
+        "Milk": "Milk 2%",
         "SourCream": "Sour Cream",
-        "OrchardYog": "Orchard Yog"
+        "OrchardYog": "Orchard Yogurt"
     } 
     },
     "Footer": {

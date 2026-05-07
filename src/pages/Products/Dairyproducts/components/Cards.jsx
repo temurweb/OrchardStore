@@ -13,29 +13,21 @@ export default function Cards() {
   const addToCart = useCartStore(state => state.addToCart)
 
   return (
-    <div>
-      <div className='bg-gray-200 py-10 px-5 md:px-20 '>
-      <h1 className='text-[24px] md:text-[40px] text-green-600 font-bold'>Dairy Products</h1>
-      {/* for cards */}
-      <div className='grid grid-cols-2 justify-center md:flex md:flex-row gap-2 md:gap-3'>
-        {dairyProducts.map(product => (
-        <div key={product.id} className='flex flex-col items-center  h-full max-w-2xs  rounded-3xl bg-white p-2'>
-       <img className={product.class} src={product.image} alt="" />
-          <p className='text-[12px] md:text-[16px] font-bold'>{t(product.name)}</p>
-           {product.pricePerkg && <p className='bg-yellow-400 p-2 rounded-2xl text-white font-bold'>{product.pricePerkg} UZS </p>}
-           {product.price && <p className='bg-yellow-400 p-2 rounded-2xl text-white font-bold'>{product.price} UZS</p>}
-          <div className='flex gap-2 text-gray-600 font-bold'>
-          {product.size && <p className=''>{product.size}</p>}
-          {product.pricePerG && <p>{product.pricePerG} UZS</p>}
-          </div>
-          <button onClick={() => addToCart(product)} className=' bg-green-600 rounded-3xl p-2 text-[16px] text-white font-bold'>Add To Cart</button>
-          <div>
-  
-          </div>
-        </div>
-        ))}
-      </div>
-      </div>
+    <div className='bg-gray-200 py-10 lg:py-20 px-5 lg:px-20'>
+       <h2 className='text-green-600 text-[20px] lg:text-[32px] font-semibold'>{t("Header.Product_Categories.DairyProducts")}</h2>
+         <div className='grid grid-cols-2 gap-3 lg:grid-cols-5 mt-8'>
+          {dairyProducts.map((product) => {
+            return (
+              <div className='bg-white px-5 py-2 rounded-2xl relative'>
+                 <img src={product.image} className={product.class} alt="product.img" />
+                <h2 className='text-green-600 text-[16px] lg:text-[24px] font-semibold'>{t(product.name)}</h2>
+                 <p className='text-gray-500 text-[12px] lg:text-[20px]'>{product.size}</p>
+                  <h2 className='text-gray-700 text-[20px] lg:text-[24px]'>{product.price} <span>{t("Cart.Currency")}</span></h2>
+                  <button onClick={() => addToCart(product)} className='bg-green-600 w-full text-white rounded-2xl text-[18px] lg:text-[20px] font-bold p-2 '>{t("Cart.Buttons.AddToCart")}</button>
+              </div>
+            )
+          })}
+         </div>
     </div>
   )
 }
