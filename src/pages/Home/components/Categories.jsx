@@ -11,7 +11,7 @@ export default function Categories() {
   const { t } = useTranslation()
   return (
     <div>
-      <div className=' px-5 lg:px-20 py-8 bg-gray-200'>
+      <div className=' px-10 lg:px-20 py-8 bg-gray-200'>
         <div className='flex justify-center lg:justify-between items-center'>
           <h2 className='text-[24px] lg:text-[32px] text-center text-green-600 font-semibold'>{t("Home.title_3")}</h2>
            <Link className='hidden lg:block' to='/category'>

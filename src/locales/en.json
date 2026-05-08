@@ -32,8 +32,8 @@
     "cardtitle_2": "Vegetables",
     "cardtitle_3": "Fruits",
     "cardtitle_4": "Bakery",
-    "cardtitle_5": "Get your groceries delivered to your doorstep within hours",
-    "cardtitle_6": "We only provide hand-picked high-quality fresh items",
+    "cardtitle_5": "Get your groceries delivered to your doorstep within hours. We deliver fresh products without being late to your doorstep.",
+    "cardtitle_6": "We only provide hand-picked high-quality fresh items. Get them and enjoy your healthy life with us.",
     "cardtitle_7": "All transcations are encrypted"
     },
     "About": {
@@ -70,9 +70,25 @@
     "Products": {
     "DairyProducts": {
         "Milk": "Milk 2%",
-        "SourCream": "Sour Cream",
-        "OrchardYog": "Orchard Yogurt"
-    } 
+        "OrchardYog": "Orchard Yog",
+        "Butter": "Butter"
+    },
+    "Vegetables": {
+        "Tomato": "Pink Tomato",
+        "Carrot_1": "Orange Carrot",
+        "Cucumber": "Cucumber",
+        "Potato": "Potato White"
+    }
+    },
+    "Login": {
+      "Login": "Log in",
+      "Email": "Email",
+      "Password": "Password",
+      "input_title_1": "Enter your email",
+      "input_title_2": "Enter your password",
+      "title_1": "don't have an account?",
+      "message_1": "Must be 8 characters",
+      "button_1": "Login"
     },
     "Footer": {
       "title_1": "Shop smarter & Feel healthy",

@@ -32,8 +32,8 @@
     "cardtitle_2": "Sabzavotlar",
     "cardtitle_3": "Mevalar",
     "cardtitle_4": "Qandolat",
-    "cardtitle_5": "Soatlar ichida oziq-ovqat yetkazib berish xizmatiga ega bo'ling",
-    "cardtitle_6": "Biz faqat saralangan yuqori sifatli mahsulotlarni ulashamiz",
+    "cardtitle_5": "Soatlar ichida oziq-ovqat yetkazib berish xizmatiga ega bo'ling. Biz har bir mahsulotni kechiktirmasdan xonadonlarga yetkazib beramiz.",
+    "cardtitle_6": "Biz faqat saralangan yuqori sifatli mahsulotlarni ulashamiz. Bizdan buyurtma qiling va sog'lom hayotingizdan rohatlaning.",
     "cardtitle_7": "Hamma to'lovlar himoyalangan va xavfsiz"
     },
     "About": {
@@ -64,15 +64,31 @@
      "Size": "O'lcham",
      "Buttons": {
      "Remove": "O'chirish",
-     "AddToCart": "Savatga qo'shish"
+     "AddToCart": "Savatga"
      }
     },
     "Products": {
     "DairyProducts": {
       "Milk": "Sut 2%",
-      "SourCream": "Qaymoq",
-      "OrchardYog": "Orchard Yogurt"
-    } 
+      "OrchardYog": "Orchard Yog",
+      "Butter": "Saryog'"
+    },
+    "Vegetables": {
+        "Tomato": "Pushti Pomidor",
+        "Carrot_1": "Qizil Sabzi",
+        "Cucumber": "Bodring",
+        "Potato": "Kartoshka Oq"
+    }
+    },
+    "Login": {
+      "Login": "Kirish",
+      "Email": "Pochta",
+      "Password": "Parol",
+      "input_title_1": "Pochtangizni kiriting",
+      "input_title_2": "Parolingizni kiriting",
+      "title_1": "Akkaunt ochmaganmisiz?",
+      "message_1": "Kamida 8ta raqam kerak",
+      "button_1": "Kirish"
     },
     "Footer": {
       "title_1": "Aqlli xarid & Sog'lom hayot",

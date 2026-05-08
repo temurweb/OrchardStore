@@ -1,4 +1,5 @@
 import React from 'react'
+import MobileSidebar from '../pages/Category/components/MobileSidebar'
 // auth
 import { useAuth } from '../context/AuthContext'
 import { auth } from '../firebase/config'
@@ -6,6 +7,7 @@ import { signOut } from 'firebase/auth'
 // react-router-dom
 import { Link } from 'react-router-dom'
 import { NavLink } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
 // i18next
 import { useTranslation } from 'react-i18next'
 import i18next from 'i18next'
@@ -18,10 +20,19 @@ import { FaAngleUp } from "react-icons/fa6";
 import { VscAccount } from "react-icons/vsc";
 import { MdOutlineShoppingCart, MdOutlineAccountCircle } from "react-icons/md";
 import { IoLanguage } from "react-icons/io5";
+import { FiMenu } from 'react-icons/fi'
 
 
 
 export default function Header() {
+  
+  // mobilesidebar
+  const [ sidebar, setSidebar ] = useState(false)
+
+  // location
+  const location = useLocation()
+  const isLogin = location.pathname === '/login'
+  const isCategory = location.pathname.startsWith('/category')
 
   // lang
   const { t } = useTranslation()
@@ -63,11 +74,14 @@ export default function Header() {
 
 
   return (
-     <header className='flex justify-between gap-8 px-5 lg:px-16 items-center h-16 py-2 relative bg-white z-50'>
+     <header className={`flex justify-between gap-8 px-5 lg:px-16 items-center h-16 py-2 relative shadow-sm    bg-white z-50 ${isLogin ? 'hidden' : ''}`}>
+      <div className='flex gap-2 items-center'>
+        <FiMenu onClick={() => setSidebar(true)} className={`w-6 h-6 text-gray-500  lg:hidden ${isCategory ? 'block' : 'hidden'}`}/>
        <Link className='flex text-[24px] lg:text-[32px] text-green-600 font-bold' to='/'><h2>Orchard</h2><span className='text-yellow-500'>Store</span></Link>
+      </div>
        <ul className='hidden lg:flex lg:items-center gap-8 text-[24px] text-gray-500 font-semibold'>
         <li>
-          <NavLink to='/aboutus' className={({isActive}) => isActive ? 'text-green-600' : ''}>{t("Header.About us")}</NavLink>
+          <NavLink to='/aboutus' className={({isActive}) => isActive ? 'text-yellow-500' : ''}>{t("Header.About us")}</NavLink>
         </li>
         <li>
           <button className={`flex gap-1 items-center cursor-pointer ${products ? 'text-yellow-500' : ''}`} onClick={() => setProducts(!products)}>{t("Header.Products")}
@@ -77,7 +91,7 @@ export default function Header() {
             <div className='absolute top-16 left-0 w-full bg-white py-8 px-20 shadow-md'>
               <h2 className='text-[32px] text-gray-400'>{t("Header.Products")}</h2>
               <ul className='text-[24px] gap-4'>
-                <li className='hover:text-yellow-500'><Link to='/dairyproducts'>{t("Header.Product_Categories.DairyProducts")}</Link></li>
+                <li className='hover:text-yellow-500'><Link to='category/dairyproducts'>{t("Header.Product_Categories.DairyProducts")}</Link></li>
                 <li className='hover:text-yellow-500'><Link>{t("Header.Product_Categories.Vegetables")}</Link></li>
                 <li></li>
                 <li></li>
@@ -131,6 +145,12 @@ export default function Header() {
         )}
       </div>
      </div>
+     
+     {/* mobilesidebar */}
+     <MobileSidebar
+      sidebar={sidebar}
+      setSidebar={setSidebar}
+     />
      </header>
   )
 }

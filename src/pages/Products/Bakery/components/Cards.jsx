@@ -1,33 +1,34 @@
 import React from 'react'
-import Bakery from '../../../../data/bakery'
+import dBakery from '../../../../data/bakery'
 import { useCartStore } from '../../../../store/useCartStore'
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
+import bakery from '../../../../data/bakery'
 
 export default function Cards() {
   const [ addedMessage, setAddedMessage ] = useState(false)
+
+  const { t } = useTranslation()
 
 
   const addToCart = useCartStore(state => state.addToCart)
 
   return (
-    <div>
-      <div className='bg-gray-200 py-10 px-5 md:px-20 '>
-      <h1 className='text-[24px] md:text-[40px] text-green-600 font-bold'>Bakery</h1>
-      {/* for cards */}
-      <div className='grid grid-cols-2 md:flex md:flex-row gap-2 md:gap-3'>
-        {Bakery.map(product => (
-        <div key={product.id} className='flex flex-col items-center  h-full max-w-2xs  rounded-3xl bg-white p-2'>
-       <img className={product.class} src={product.image} alt="" />
-          <p className='text-[12px] md:text-[16px] font-bold'>{product.name}</p>
-           <p className='bg-yellow-400 p-2 rounded-2xl text-white font-bold'>{product.price} UZS</p>
-          <button onClick={() => addToCart(product)} className=' bg-green-600 rounded-3xl p-2 text-[16px] text-white font-bold mt-2'>Add To Cart</button>
-          <div>
-  
-          </div>
-        </div>
-        ))}
-      </div>
-      </div>
+    <div className='bg-gray-200 py-10 lg:py-20 px-5 lg:px-20'>
+       <h2 className='text-green-600 text-[20px] lg:text-[32px] font-semibold'>{t("Header.Product_Categories.DairyProducts")}</h2>
+         <div className='grid grid-cols-2 gap-3 lg:grid-cols-5 mt-8'>
+          {bakery.map((product) => {
+            return (
+              <div className='bg-white px-2 lg:px-5 py-2 rounded-2xl relative'>
+                 <img src={product.image} className={product.class} alt="product.img" />
+                <h2 className='text-green-600 text-[20px] lg:text-[24px] font-semibold'>{t(product.name)}</h2>
+                 <p className='text-gray-500 text-[16px] lg:text-[20px]'>{product.size}</p>
+                  <h2 className='text-gray-700 text-[20px] lg:text-[24px]'>{product.price} <span>{t("Cart.Currency")}</span></h2>
+                  <button onClick={() => addToCart(product)} className='bg-green-600 w-full text-white rounded-2xl text-[18px] lg:text-[20px] font-bold p-2 '>{t("Cart.Buttons.AddToCart")}</button>
+              </div>
+            )
+          })}
+         </div>
     </div>
   )
 }

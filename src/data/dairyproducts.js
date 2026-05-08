@@ -2,6 +2,8 @@
 import Milk from '../images/Milk.png'
 import sour_cream from '../images/sour_cream.png'
 import orchard_yogurt from '../images/orchard_yogurt.png'
+import qatiq from '../images/Qatiq.png'
+import butter from '../images/butter.png'
 
 const dairyProducts = [
     {
@@ -14,12 +16,30 @@ const dairyProducts = [
         class: "w-58 h-36 lg:w-72 lg:h-44 object-contain bg-linear-to-r from-blue-300 to-blue-400 p-2 rounded-3xl"
     },
     {
+        id: 2,
+        name: "Qatiq",
+        image: qatiq,
+        quantity: 2,
+        price: 4990,
+        size: "200g",
+        class: "w-58 h-36 lg:w-72 lg:h-44 object-contain bg-linear-to-r from-blue-300 to-blue-400 p-2 rounded-3xl"
+    },
+    {
         id: 3,
         name: "Products.DairyProducts.OrchardYog",
         image: orchard_yogurt,
         quantity: 3,
         price: 3990,
         size: "95g",
+        class: "w-58 h-36 lg:w-72 lg:h-44 object-contain bg-linear-to-r from-blue-300 to-blue-400 p-2 rounded-3xl"
+    },
+    {
+        id: 4,
+        name: "Products.DairyProducts.Butter",
+        image: butter,
+        quantity: 4,
+        price: 25130,
+        size: "200g",
         class: "w-58 h-36 lg:w-72 lg:h-44 object-contain bg-linear-to-r from-blue-300 to-blue-400 p-2 rounded-3xl"
     }
 ]

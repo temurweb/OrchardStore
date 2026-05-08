@@ -37,7 +37,7 @@ export default function HeroSection() {
         </li>
         <li></li>
       </ul>
-      <img className='w-[512px] pt-4 lg:pt-0 lg:w-[612px] lg:h-[512px] rounded-tl-4xl rounded-bl-4xl' src={deliver} alt="" />
+      <img className='w-[512px] pt-4  lg:w-[760px] lg:h-[612px] rounded-tl-4xl rounded-bl-4xl' src={deliver} alt="" />
     </div>
   )
 }
