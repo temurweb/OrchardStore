@@ -2,6 +2,7 @@ import tomatoe from '../images/tomato.png'
 import carrot from '../images/carrot.png'
 import cucumber from '../images/cucumber.png'
 import potato from '../images/potato.png'
+import radish from '../images/radish.png'
 
 const vegetables = [
     { 
@@ -10,7 +11,7 @@ const vegetables = [
         image: tomatoe,
         size: "1kg",
         price: 8000,
-        quantity: 4,
+        quantity: 5,
         class: "w-58 h-36 lg:w-72 lg:h-44 object-contain bg-amber-400 p-2 rounded-3xl"
     },
     {
@@ -19,7 +20,7 @@ const vegetables = [
         size: "1kg",
         image: carrot,
         price: 6000,
-        quantity: 5,
+        quantity: 6,
         class: "w-58 h-36 lg:w-72 lg:h-44 object-contain bg-amber-400 p-2 rounded-3xl"
     },
     {
@@ -39,6 +40,15 @@ const vegetables = [
         price: 4550, 
         quantity: 8,
         class: "w-58 h-36 lg:w-72 lg:h-44 object-contain bg-amber-400 p-2 rounded-3xl   "
+    },
+    {
+        id: 9,
+        name: "Products.Vegetables.Radish",
+        size: "1kg",
+        image: radish,
+        price: 8990,
+        quantity: 9,
+        class: "w-58 h-36 lg:w-72 lg:h-44 object-contain bg-amber-400 p-2 rounded-3xl"
     }
 ]
 

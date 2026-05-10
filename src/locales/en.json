@@ -59,9 +59,15 @@
     "button_2": "Learn more",
     "button_3": "View All",
     "Cart": {
+    "title_1": "Your Cart",
     "ProductsList": "Products List",
     "Currency": "sum",
     "Size": "Size",
+    "Header": {
+        "Product": "Product",
+        "Price": "Price",
+        "Quantity": "Quantity"
+    },
     "Buttons": {
         "Remove": "Remove",
         "AddToCart": "Add To Cart"
@@ -77,7 +83,8 @@
         "Tomato": "Pink Tomato",
         "Carrot_1": "Orange Carrot",
         "Cucumber": "Cucumber",
-        "Potato": "Potato White"
+        "Potato": "Potato White",
+        "Radish": "Radish"
     }
     },
     "Login": {

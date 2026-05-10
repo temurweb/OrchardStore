@@ -30,7 +30,7 @@ const { user } = useAuth()
 const navigate = useNavigate()
 
   return (
-    <div className={`fixed shadow-[0_8px_20px_rgba(0,0,0,0.08)] lg:hidden bottom-0 rounded-t-4xl w-full py-2 px-3 bg-white/60 backdrop-blur-xl ${isRegister || isLogin ? "hidden" : ""}`}>
+    <div className={`fixed shadow-[0_8px_20px_rgba(0,0,0,0.08)] lg:hidden bottom-0 rounded-t-4xl w-full py-2 px-3 bg-white/60 backdrop-blur-2xl ${isRegister || isLogin ? "hidden" : ""}`}>
       <ul className='grid grid-cols-5 justify-center items-center gap-3'>
         <li>
         <NavLink className={({isActive}) => `flex flex-col items-center py-2 px-4 rounded-full  ${isActive ? "bg-yellow-500 text-white transition-all duration-300 ease-in-out" : "text-black"}` } to='/'>
@@ -56,13 +56,13 @@ const navigate = useNavigate()
         </NavLink>
         </li>
         <li>
-        <NavLink className={({isActive}) => `flex flex-col items-center py-2 px-4 rounded-full  ${isActive ? "bg-yellow-500 text-white transition-all duration-300 ease-in-out" : "text-black"}`} to='/category'>
+        <NavLink className={({isActive}) => `flex flex-col items-center py-2 px-4 rounded-full  ${isActive ? "bg-yellow-500 shadow-md shadow-yellow-500 text-white transition-all duration-300 ease-in-out" : "text-black"}`} to='/category'>
          <AiOutlineProduct className='w-6 h-6 md:w-10 md:h-10'/>
          <h2 className='text-[12px] md:text-[20px] font-bold'>{t("BottomNavigation.Category_nav")}</h2>
         </NavLink>
         </li>
         <li>
-          <NavLink className={({isActive}) => `flex flex-col items-center py-2 px-4 rounded-full  ${isActive ? "bg-yellow-500 text-white duration-300 ease-in-out" : "text-black"}`} to={user ? '/profile' : '/register'}>
+          <NavLink className={({isActive}) => `flex flex-col items-center py-2 px-4 rounded-full  ${isActive ? "bg-yellow-500 shadow-md shadow-yellow-500 text-white duration-300 ease-in-out" : "text-black"}`} to={user ? '/profile' : '/register'}>
               <CgProfile className='w-6 h-6 md:w-10 md:h-10'/>
               <h2 className='text-[12px] md:text-[20px] font-bold '>{t("Account")}</h2>
           </NavLink>

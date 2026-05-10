@@ -59,9 +59,15 @@
     "button_2": "Ko'proq",
     "button_3": "Hammasini Ko'rish",
     "Cart": {
+     "title_1": "Sizning Savatingiz",
      "ProductsList": "Mahsulotlar ro'yxati",
      "Currency": "so'm",
      "Size": "O'lcham",
+     "Header": {
+      "Product": "Mahsulot",
+      "Price": "Narx",
+      "Quantity": "Miqdor"
+     },
      "Buttons": {
      "Remove": "O'chirish",
      "AddToCart": "Savatga"
@@ -77,7 +83,8 @@
         "Tomato": "Pushti Pomidor",
         "Carrot_1": "Qizil Sabzi",
         "Cucumber": "Bodring",
-        "Potato": "Kartoshka Oq"
+        "Potato": "Kartoshka Oq",
+        "Radish": "Rediska"
     }
     },
     "Login": {

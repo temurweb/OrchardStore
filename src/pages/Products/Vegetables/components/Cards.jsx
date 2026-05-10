@@ -13,9 +13,9 @@ export default function Cards() {
   const { addToCart, decreaseQuantity} = useCartStore()
 
   return (
-    <div className='bg-gray-200 py-10 lg:py-20 px-5 lg:px-20'>
-       <h2 className='text-green-600 text-[20px] lg:text-[32px] font-semibold'>{t("Header.Product_Categories.Vegetables")}</h2>
-         <div className='grid grid-cols-2 gap-3 lg:grid-cols-5 mt-8'>
+    <div className='bg-gray-200 py-10 lg:py-20 px-5 lg:px-20 min-h-screen'>
+       <h2 className='text-green-600 text-[24px] lg:text-[32px] font-semibold'>{t("Header.Product_Categories.Vegetables")}</h2>
+         <div className='grid grid-cols-2 gap-3 md:grid-cols-4 lg:grid-cols-5 mt-8'>
           {Vegetables.map((product) => {
             return (
               <div className='bg-white px-2 lg:px-5 py-2 rounded-2xl relative'>
