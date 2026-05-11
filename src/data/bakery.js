@@ -8,7 +8,7 @@ const bakery = [
         image: pastry_waffle,
         quantity: 7,
         price: 26000,
-        class: "w-58 h-36 object-contain bg-stone-500 p-2 rounded-3xl"
+        class: "w-58 h-36 lg:w-72 lg:w-44 object-contain bg-stone-500 p-2 rounded-3xl"
     }
 ]
 

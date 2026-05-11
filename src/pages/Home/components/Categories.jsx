@@ -38,7 +38,7 @@ export default function Categories() {
          {/* Card 4 */}
          <div className='flex flex-col items-center bg-white rounded-3xl p-2 md:p-3 shadow-md duration-500 hover:scale-105 hover:shadow-xl cursor-pointer'>
             <img className='w-56 h-48 object-contain' src={bakery} alt="bakeries" />
-            <h2 className='text-[16px] text-gray-400 font-bold'>{t("Home.cardtitle_4")}</h2>
+            <Link to='/category/bakery'><h2 className='text-[16px] text-gray-400 font-bold'>{t("Home.cardtitle_4")}</h2></Link>
          </div>
         </div>
       </div>
