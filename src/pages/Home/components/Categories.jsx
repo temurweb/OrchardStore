@@ -22,12 +22,12 @@ export default function Categories() {
         <div className='grid grid-cols-1  gap-8 mt-6 md:grid md:grid-cols-3 lg:grid lg:grid-cols-4'>
          {/* Card 1 */}
          <div className='flex flex-col items-center bg-white rounded-3xl p-2 md:p-2 shadow-md duration-500 hover:scale-105 hover:shadow-xl cursor-pointer'>
-           <Link to='/dairyproducts'><img className='w-56 h-48 object-contain' src={dairy_products} alt="dairy" /></Link>
+           <Link to='/category/dairyproducts'><img className='w-56 h-48 object-contain' src={dairy_products} alt="dairy" /></Link>
            <h2 className='text-[16px] text-gray-400 font-bold'>{t("Home.cardtitle_1")}</h2>
          </div>
          {/* Card 2 */}
          <div className='flex flex-col items-center bg-white rounded-3xl p-2 md:p-3 shadow-md duration-500 hover:scale-105 hover:shadow-xl cursor-pointer'>
-            <Link to='/vegetables'><img className='w-56 h-48 object-conatin' src={vegetables} alt="vegetables" /></Link>
+            <Link to='/category/vegetables'><img className='w-56 h-48 object-conatin' src={vegetables} alt="vegetables" /></Link>
             <h2 className='text-[16px] text-gray-400 font-bold'>{t("Home.cardtitle_2")}</h2>
          </div>
          {/* Card 3 */}

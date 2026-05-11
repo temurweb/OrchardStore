@@ -60,6 +60,8 @@
     "button_3": "View All",
     "Cart": {
     "title_1": "Your Cart",
+    "title_2": "Your Cart Is Empty",
+    "title_3": "Begin searching for products",
     "ProductsList": "Products List",
     "Currency": "sum",
     "Size": "Size",
@@ -70,7 +72,8 @@
     },
     "Buttons": {
         "Remove": "Remove",
-        "AddToCart": "Add To Cart"
+        "AddToCart": "Add To Cart",
+        "Cta_Btn": "Start Shopping"
     }
     },
     "Products": {

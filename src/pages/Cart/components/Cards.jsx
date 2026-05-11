@@ -1,17 +1,31 @@
 import React from 'react'
+// images
+import search from '../../../images/search.png'
 // hooks
 import { useCartStore } from '../../../store/useCartStore'
 import { useTranslation } from 'react-i18next'
 // icons
 import { FiPlus, FiMinus } from 'react-icons/fi'
-import { MdDelete } from "react-icons/md";
+import { IoCloseOutline } from "react-icons/io5";
 
 export default function Cards() {
-  // cart
-  const { cart, addToCart, decreaseQuantity, removeFromCart } = useCartStore()
-
+ 
   // translation
   const { t } = useTranslation()
+
+   // cart
+  const { cart, addToCart, decreaseQuantity, removeFromCart } = useCartStore()
+
+  if (cart.length === 0) {
+    return (
+      <div className='bg-gray-200 min-h-screen py-20 px-10 flex flex-col items-center'>
+        <img className='w-[230px] h-[340px] md:w-[350px] md:h-[512px]' src={search} alt="search" />
+        <h2 className='text-green-600 text-[20px] md:text-[24px] lg:text-[32px] font-semibold'>{t("Cart.title_2")}</h2>
+        <p className='text-[16px] md:text-[20px] lg:text-[24px] text-yellow-500 font-bold'>{t("Cart.title_3")}</p>
+        <button className='my-4 bg-green-600 p-2 text-white rounded-2xl w-52 font-bold text-[20px] lg:text-[24px]'>{t("Cart.Buttons.Cta_Btn")}</button>
+      </div>
+    )
+  }
 
   return (
     <div className='bg-gray-200 min-h-screen px-5 py-10 lg:py-20 lg:px-20'>
@@ -34,9 +48,9 @@ export default function Cards() {
             <div className=''>
               {cart.map((product) => {
                 return (
-                  <div className='flex lg:grid lg:grid-cols-[3fr_2fr_2fr_1fr] gap-4 items-center px-5 py-3' key={product.id}>
+                  <div className='flex lg:grid lg:grid-cols-[3fr_2fr_2fr_1fr] gap-4 items-center px-5 py-3 relative' key={product.id}>
                     <div className='flex gap-3 items-center'>
-                      <img src={product.image} className='w-44 h-32 lg:w-32 lg:h-32 object-contain rounded-2xl bg-green-600' alt="" />
+                      <img src={product.image} className='w-36 h-32 lg:w-32 lg:h-32 object-contain rounded-2xl bg-green-600' alt="" />
                        <div className='flex flex-col'>
                         <h2 className='text-[16px] md:text-[20px] lg:text-[24px] font-medium'>{t(product.name)}</h2>
                         <p className='text-[14px] md:text-[16px] lg:text-[20px] font-light text-gray-800'>{product.size}</p>
@@ -48,8 +62,8 @@ export default function Cards() {
                           <p>{product.quantity}</p>
                           <button disabled={product.quantity === 20}><FiPlus  className='bg-green-500 p-0.5 rounded-full w-5 h-5 text-white' onClick={() => addToCart(product)}/></button>
                         </div>
-                        <button className='bg-gray-200 p-2 rounded-full'><MdDelete onClick={() => removeFromCart(product)} className='w-5 h-5 text-red-500'/></button>
                         </div>
+                        <IoCloseOutline onClick={() => removeFromCart(product)} className='absolute top-4 right-3 w-5 h-5 text-gray-500'/>
                        </div>
                     </div>
                     <h2 className='text-[19px] font-bold hidden lg:block'>{product.price} {t("Cart.Currency")}</h2>

@@ -60,6 +60,8 @@
     "button_3": "Hammasini Ko'rish",
     "Cart": {
      "title_1": "Sizning Savatingiz",
+     "title_2": "Savatingiz bo'sh",
+     "title_3": "Mahsulotlarni qidirishni boshlang",
      "ProductsList": "Mahsulotlar ro'yxati",
      "Currency": "so'm",
      "Size": "O'lcham",
@@ -70,7 +72,8 @@
      },
      "Buttons": {
      "Remove": "O'chirish",
-     "AddToCart": "Savatga"
+     "AddToCart": "Savatga",
+     "Cta_Btn": "Qidirishni Boshlash"
      }
     },
     "Products": {
