@@ -8,7 +8,7 @@ import { useTranslation } from 'react-i18next'
 import { FiPlus, FiMinus } from 'react-icons/fi'
 import { IoCloseOutline } from "react-icons/io5";
 // react-router-dom
-import Link from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 export default function Cards() {
  
@@ -24,7 +24,7 @@ export default function Cards() {
         <img className='w-[230px] h-[340px] md:w-[350px] md:h-[512px]' src={search} alt="search" />
         <h2 className='text-green-600 text-[20px] md:text-[24px] lg:text-[32px] font-semibold'>{t("Cart.title_2")}</h2>
         <p className='text-[16px] md:text-[20px] lg:text-[24px] text-yellow-500 font-bold'>{t("Cart.title_3")}</p>
-        <Link to='/categories'><button className="w-52 text-white bg-yellow-500  p-2 rounded-3xl>{t("Cart.Buttons.Cta_Btn")}</button></Link>      
+      <Link to='/category'><button>{t("Cart.Buttons.Cta_Btn")}</button></Link>
       </div>
     )
   }
