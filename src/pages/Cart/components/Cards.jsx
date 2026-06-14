@@ -24,7 +24,7 @@ export default function Cards() {
         <img className='w-[230px] h-[340px] md:w-[350px] md:h-[512px]' src={search} alt="search" />
         <h2 className='text-green-600 text-[20px] md:text-[24px] lg:text-[32px] font-semibold'>{t("Cart.title_2")}</h2>
         <p className='text-[16px] md:text-[20px] lg:text-[24px] text-yellow-500 font-bold'>{t("Cart.title_3")}</p>
-      <Link to='/category'><button>{t("Cart.Buttons.Cta_Btn")}</button></Link>
+      <Link to='/category' className='text-[16px] md:text-[20px] lg:text-[24px] text-white bg-yellow-500 w-52 p-2 shadow-md shadow-yellow-500 '><button>{t("Cart.Buttons.Cta_Btn")}</button></Link>
       </div>
     )
   }
