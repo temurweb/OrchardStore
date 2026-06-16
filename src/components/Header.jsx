@@ -33,7 +33,7 @@ export default function Header() {
   const location = useLocation()
   const isLogin = location.pathname === '/login'
   const isCategory = location.pathname.startsWith('/category')
-
+  const isRegister = location.pathname === '/register'
   // lang
   const { t } = useTranslation()
   const [ lang, setLang ] = useState(false)
@@ -74,7 +74,7 @@ export default function Header() {
 
 
   return (
-     <header className={`flex justify-between gap-8 px-5 lg:px-16 items-center h-16 py-2 relative shadow-sm    bg-white z-50 ${isLogin ? 'hidden' : ''}`}>
+     <header className={`flex justify-between gap-8 px-5 lg:px-16 items-center h-16 py-2 relative shadow-sm    bg-white z-50 ${isLogin || isRegister ? 'hidden' : ''}`}>
       <div className='flex gap-2 items-center'>
         <FiMenu onClick={() => setSidebar(true)} className={`w-6 h-6 text-gray-500  lg:hidden ${isCategory ? 'block' : 'hidden'}`}/>
        <Link className='flex text-[24px] lg:text-[32px] text-green-600 font-bold' to='/'><h2>Orchard</h2><span className='text-yellow-500'>Store</span></Link>
